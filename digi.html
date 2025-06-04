@@ -7,16 +7,50 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans m-0 p-0 text-gray-900 bg-gray-100">
-  <header class="bg-blue-700 text-white p-5 text-center">
-    <h1>The Digital Hub – HP Connect Showroom</h1>
-    <nav>
-      <a href="#laptops" class="mx-4 text-white no-underline">Business Laptops</a>
-      <a href="#printers" class="mx-4 text-white no-underline">Business Printers</a>
-      <a href="#why" class="mx-4 text-white no-underline">Why Choose Us</a>
-      <a href="#about" class="mx-4 text-white no-underline">About Us</a>
-      <a href="#contact" class="mx-4 text-white no-underline">Contact</a>
+  <header class="bg-blue-700 text-white">
+    <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="https://via.placeholder.com/40x40?text=HP" alt="HP Connect logo" class="h-10 w-10" />
+        <span class="font-semibold text-lg">HP Connect</span>
+      </a>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <nav id="nav-links" class="hidden md:flex space-x-6">
+        <a href="#laptops" class="hover:underline">Business Laptops</a>
+        <a href="#printers" class="hover:underline">Business Printers</a>
+        <a href="#why" class="hover:underline">Why Choose Us</a>
+        <a href="#about" class="hover:underline">About Us</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="#laptops" class="block py-1 hover:underline">Business Laptops</a>
+      <a href="#printers" class="block py-1 hover:underline">Business Printers</a>
+      <a href="#why" class="block py-1 hover:underline">Why Choose Us</a>
+      <a href="#about" class="block py-1 hover:underline">About Us</a>
+      <a href="#contact" class="block py-1 hover:underline">Contact</a>
     </nav>
   </header>
+
+  <section class="relative overflow-hidden" id="banner">
+    <div id="slides" class="flex transition-transform duration-700">
+      <div class="w-full flex-shrink-0 relative h-64">
+        <img src="https://via.placeholder.com/1200x400?text=HP+Laptops" alt="HP Laptops" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h2 class="text-white text-3xl font-bold">Business Laptops</h2>
+        </div>
+      </div>
+      <div class="w-full flex-shrink-0 relative h-64">
+        <img src="https://via.placeholder.com/1200x400?text=HP+Printers" alt="HP Printers" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h2 class="text-white text-3xl font-bold">Business Printers</h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="laptops" class="p-10 max-w-5xl mx-auto">
     <h2 class="text-blue-700 text-2xl font-semibold mb-4">HP Business Laptops</h2>
@@ -61,12 +95,35 @@
     <p><strong>Email:</strong> <a href="mailto:hpconnect@thedigitalhub.in" class="text-blue-700 underline">hpconnect@thedigitalhub.in</a></p>
     <p><strong>Phone:</strong> <a href="tel:09645346608" class="text-blue-700 underline">096453 46608</a></p>
     <p><strong>Address:</strong><br>3rd Floor, Oberon Mall, No 41/416, NH Bypass, NH Bye Pass,<br>Padivattom, Edappally, Kochi, Ernakulam, Kerala 682024</p>
-    <p>Location: [Embed Google Map Here]</p>
   </section>
 
-  <footer class="bg-blue-900 text-white text-center p-5">
-    <p>&copy; 2025 The Digital Hub | HP Connect Showroom</p>
+  <footer class="bg-blue-900 text-white p-5">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+        <p>Email: <a href="mailto:hpconnect@thedigitalhub.in" class="underline">hpconnect@thedigitalhub.in</a></p>
+        <p>Phone: <a href="tel:09645346608" class="underline">096453 46608</a></p>
+        <p>3rd Floor, Oberon Mall, No 41/416, NH Bypass, NH Bye Pass, Padivattom, Edappally, Kochi, Ernakulam, Kerala 682024</p>
+      </div>
+      <iframe class="w-full h-64 border-0" src="https://maps.google.com/maps?q=Oberon%20Mall%20Kochi&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="text-center mt-4">&copy; 2025 The Digital Hub | HP Connect Showroom</p>
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const slides = document.getElementById('slides');
+    let slideIndex = 0;
+    setInterval(() => {
+      slideIndex = (slideIndex + 1) % slides.children.length;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }, 3000);
+  </script>
 </body>
 </html>
 
