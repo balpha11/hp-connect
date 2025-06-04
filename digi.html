@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HP Connect | The Digital Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans text-gray-900 bg-gray-100 m-0 p-0">
+<body class="font-sans m-0 p-0 text-gray-900 bg-gray-100">
 
-  <!-- Navigation Header -->
+  <!-- Header -->
   <header class="bg-blue-700 text-white">
-    <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
       <a href="#" class="flex items-center space-x-2">
         <img src="https://via.placeholder.com/40x40?text=HP" alt="HP Connect logo" class="h-10 w-10" />
         <span class="font-semibold text-lg">HP Connect</span>
       </a>
       <button id="menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round"
-             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -39,16 +38,16 @@
   </header>
 
   <!-- Banner Slider -->
-  <section id="banner" class="relative overflow-hidden">
+  <section class="relative overflow-hidden" id="banner">
     <div id="slides" class="flex transition-transform duration-700">
       <div class="w-full flex-shrink-0 relative h-64">
-        <img src="https://via.placeholder.com/1200x400?text=HP+Laptops" alt="HP Laptops" class="w-full h-full object-cover"/>
+        <img src="https://via.placeholder.com/1200x400?text=HP+Laptops" alt="HP Laptops" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <h2 class="text-white text-3xl font-bold">Business Laptops</h2>
         </div>
       </div>
       <div class="w-full flex-shrink-0 relative h-64">
-        <img src="https://via.placeholder.com/1200x400?text=HP+Printers" alt="HP Printers" class="w-full h-full object-cover"/>
+        <img src="https://via.placeholder.com/1200x400?text=HP+Printers" alt="HP Printers" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <h2 class="text-white text-3xl font-bold">Business Printers</h2>
         </div>
@@ -56,35 +55,72 @@
     </div>
   </section>
 
-  <!-- Laptop Products -->
-  <section id="laptops" class="p-10 max-w-5xl mx-auto">
-    <h2 class="text-blue-700 text-2xl font-semibold mb-4">HP Business Laptops</h2>
-    <div class="flex flex-wrap gap-5">
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">EliteBook X Laptops</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">EliteBook Ultra</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">Elite Dragonfly</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">EliteBook</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">ProBook</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">ZBook Workstations</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">HP Essentials</div>
+  <!-- Business Laptops -->
+  <section id="laptops" class="p-10 max-w-6xl mx-auto">
+    <h2 class="text-blue-700 text-3xl font-semibold mb-6">HP Business Laptops</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=EliteBook+X" class="w-full" alt="EliteBook X">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">EliteBook X</h3>
+          <p class="text-sm text-gray-600">Premium ultra-portable business laptops with performance and style.</p>
+          <button class="mt-3 bg-black text-white px-4 py-2 text-sm">Shop Now</button>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=Dragonfly+G4" class="w-full" alt="Dragonfly G4">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Elite Dragonfly</h3>
+          <p class="text-sm text-gray-600">Lightweight, secure, and ideal for executives on the move.</p>
+          <button class="mt-3 bg-black text-white px-4 py-2 text-sm">Shop Now</button>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=ZBook+Power" class="w-full" alt="ZBook Power">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">ZBook Workstations</h3>
+          <p class="text-sm text-gray-600">Power-packed performance for creators, engineers, and coders.</p>
+          <button class="mt-3 bg-black text-white px-4 py-2 text-sm">Shop Now</button>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Printer Products -->
-  <section id="printers" class="p-10 max-w-5xl mx-auto">
-    <h2 class="text-blue-700 text-2xl font-semibold mb-4">HP Business Printers</h2>
-    <div class="flex flex-wrap gap-5">
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">ScanJet</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">LaserJet</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">OfficeJet</div>
-      <div class="bg-white p-5 flex-1 rounded-lg shadow">Large Format / DesignJet</div>
+  <!-- Business Printers -->
+  <section id="printers" class="p-10 max-w-6xl mx-auto">
+    <h2 class="text-blue-700 text-3xl font-semibold mb-6">HP Business Printers</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=LaserJet" class="w-full" alt="LaserJet">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">LaserJet Printers</h3>
+          <p class="text-sm text-gray-600">High-speed, high-volume performance built for businesses.</p>
+          <button class="mt-3 bg-black text-white px-4 py-2 text-sm">Shop Now</button>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=OfficeJet" class="w-full" alt="OfficeJet">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">OfficeJet Pro</h3>
+          <p class="text-sm text-gray-600">All-in-one office printing with low running costs and smart features.</p>
+          <button class="mt-3 bg-black text-white px-4 py-2 text-sm">Shop Now</button>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x250?text=DesignJet" class="w-full" alt="DesignJet">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">DesignJet Plotters</h3>
+          <p class="text-sm text-gray-600">Large format printing made easy for architecture and graphics.</p>
+          <button class="mt-3 bg-black text-white px-4 py-2 text-sm">Shop Now</button>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Why Choose Us -->
-  <section id="why" class="p-10 max-w-5xl mx-auto">
-    <h2 class="text-blue-700 text-2xl font-semibold mb-4">Why Choose The Digital Hub?</h2>
-    <ul class="list-disc list-inside space-y-2">
+  <section id="why" class="p-10 max-w-6xl mx-auto">
+    <h2 class="text-blue-700 text-3xl font-semibold mb-4">Why Choose The Digital Hub?</h2>
+    <ul class="list-disc list-inside text-gray-700">
       <li>Certified HP Commercial Partner</li>
       <li>Business Class Product Expertise</li>
       <li>Bulk Orders and Corporate AMC Support</li>
@@ -93,28 +129,34 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="p-10 max-w-5xl mx-auto">
-    <h2 class="text-blue-700 text-2xl font-semibold mb-4">About Us</h2>
-    <p>The Digital Hub is a dedicated HP Connect showroom located in Kochi, Kerala, specializing in the full range of HP commercial laptops and printers. With a strong focus on business-grade IT solutions, we cater to enterprises, professionals, and institutions looking for reliable, secure, and high-performance products. Our team is committed to delivering expert advice, competitive pricing, and exceptional after-sales service.</p>
+  <section id="about" class="p-10 max-w-6xl mx-auto">
+    <h2 class="text-blue-700 text-3xl font-semibold mb-4">About Us</h2>
+    <p class="text-gray-700">The Digital Hub is a dedicated HP Connect showroom located in Kochi, Kerala, specializing in HP commercial laptops and printers. We serve enterprises, professionals, and institutions with expert advice and reliable service.</p>
   </section>
 
-
+  <!-- Contact -->
+  <section id="contact" class="p-10 max-w-6xl mx-auto">
+    <h2 class="text-blue-700 text-3xl font-semibold mb-4">Contact Us</h2>
+    <p><strong>Email:</strong> <a href="mailto:hpconnect@thedigitalhub.in" class="text-blue-700 underline">hpconnect@thedigitalhub.in</a></p>
+    <p><strong>Phone:</strong> <a href="tel:09645346608" class="text-blue-700 underline">096453 46608</a></p>
+    <p><strong>Address:</strong><br>3rd Floor, Oberon Mall, No 41/416, NH Bypass, Padivattom, Edappally, Kochi, Kerala 682024</p>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-blue-900 text-white p-5">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
       <div>
         <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
         <p>Email: <a href="mailto:hpconnect@thedigitalhub.in" class="underline">hpconnect@thedigitalhub.in</a></p>
         <p>Phone: <a href="tel:09645346608" class="underline">096453 46608</a></p>
-        <p>3rd Floor, Oberon Mall, No 41/416, NH Bypass, Padivattom, Kochi</p>
+        <p>3rd Floor, Oberon Mall, No 41/416, NH Bypass, Padivattom, Edappally, Kochi, Kerala 682024</p>
       </div>
       <iframe class="w-full h-64 border-0" src="https://maps.google.com/maps?q=Oberon%20Mall%20Kochi&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
     </div>
     <p class="text-center mt-4">&copy; 2025 The Digital Hub | HP Connect Showroom</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JS -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -129,5 +171,6 @@
       slides.style.transform = `translateX(-${slideIndex * 100}%)`;
     }, 3000);
   </script>
+
 </body>
 </html>
