@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HP Connect | The Digital Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans m-0 p-0 text-gray-900 bg-gray-100">
+<body class="font-sans text-gray-900 bg-gray-100 m-0 p-0">
 
+  <!-- Navigation Header -->
   <header class="bg-blue-700 text-white">
     <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
       <a href="#" class="flex items-center space-x-2">
@@ -15,7 +16,8 @@
         <span class="font-semibold text-lg">HP Connect</span>
       </a>
       <button id="menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round"
+             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -36,16 +38,17 @@
     </nav>
   </header>
 
-  <section class="relative overflow-hidden" id="banner">
+  <!-- Banner Slider -->
+  <section id="banner" class="relative overflow-hidden">
     <div id="slides" class="flex transition-transform duration-700">
       <div class="w-full flex-shrink-0 relative h-64">
-        <img src="https://via.placeholder.com/1200x400?text=HP+Laptops" alt="HP Laptops" class="w-full h-full object-cover" />
+        <img src="https://via.placeholder.com/1200x400?text=HP+Laptops" alt="HP Laptops" class="w-full h-full object-cover"/>
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <h2 class="text-white text-3xl font-bold">Business Laptops</h2>
         </div>
       </div>
       <div class="w-full flex-shrink-0 relative h-64">
-        <img src="https://via.placeholder.com/1200x400?text=HP+Printers" alt="HP Printers" class="w-full h-full object-cover" />
+        <img src="https://via.placeholder.com/1200x400?text=HP+Printers" alt="HP Printers" class="w-full h-full object-cover"/>
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <h2 class="text-white text-3xl font-bold">Business Printers</h2>
         </div>
@@ -53,22 +56,10 @@
     </div>
   </section>
 
-
-  <header class="bg-blue-700 text-white p-5 text-center">
-    <h1>The Digital Hub – HP Connect Showroom</h1>
-    <nav>
-      <a href="#laptops" class="mx-4 text-white no-underline">Business Laptops</a>
-      <a href="#printers" class="mx-4 text-white no-underline">Business Printers</a>
-      <a href="#why" class="mx-4 text-white no-underline">Why Choose Us</a>
-      <a href="#about" class="mx-4 text-white no-underline">About Us</a>
-      <a href="#contact" class="mx-4 text-white no-underline">Contact</a>
-    </nav>
-  </header>
-
-
+  <!-- Laptop Products -->
   <section id="laptops" class="p-10 max-w-5xl mx-auto">
     <h2 class="text-blue-700 text-2xl font-semibold mb-4">HP Business Laptops</h2>
-    <div class="product-list flex flex-wrap gap-5">
+    <div class="flex flex-wrap gap-5">
       <div class="bg-white p-5 flex-1 rounded-lg shadow">EliteBook X Laptops</div>
       <div class="bg-white p-5 flex-1 rounded-lg shadow">EliteBook Ultra</div>
       <div class="bg-white p-5 flex-1 rounded-lg shadow">Elite Dragonfly</div>
@@ -79,9 +70,10 @@
     </div>
   </section>
 
+  <!-- Printer Products -->
   <section id="printers" class="p-10 max-w-5xl mx-auto">
     <h2 class="text-blue-700 text-2xl font-semibold mb-4">HP Business Printers</h2>
-    <div class="product-list flex flex-wrap gap-5">
+    <div class="flex flex-wrap gap-5">
       <div class="bg-white p-5 flex-1 rounded-lg shadow">ScanJet</div>
       <div class="bg-white p-5 flex-1 rounded-lg shadow">LaserJet</div>
       <div class="bg-white p-5 flex-1 rounded-lg shadow">OfficeJet</div>
@@ -89,9 +81,10 @@
     </div>
   </section>
 
+  <!-- Why Choose Us -->
   <section id="why" class="p-10 max-w-5xl mx-auto">
     <h2 class="text-blue-700 text-2xl font-semibold mb-4">Why Choose The Digital Hub?</h2>
-    <ul class="list-disc list-inside">
+    <ul class="list-disc list-inside space-y-2">
       <li>Certified HP Commercial Partner</li>
       <li>Business Class Product Expertise</li>
       <li>Bulk Orders and Corporate AMC Support</li>
@@ -99,36 +92,38 @@
     </ul>
   </section>
 
+  <!-- About -->
   <section id="about" class="p-10 max-w-5xl mx-auto">
     <h2 class="text-blue-700 text-2xl font-semibold mb-4">About Us</h2>
     <p>The Digital Hub is a dedicated HP Connect showroom located in Kochi, Kerala, specializing in the full range of HP commercial laptops and printers. With a strong focus on business-grade IT solutions, we cater to enterprises, professionals, and institutions looking for reliable, secure, and high-performance products. Our team is committed to delivering expert advice, competitive pricing, and exceptional after-sales service.</p>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="p-10 max-w-5xl mx-auto">
     <h2 class="text-blue-700 text-2xl font-semibold mb-4">Contact Us</h2>
     <p><strong>Email:</strong> <a href="mailto:hpconnect@thedigitalhub.in" class="text-blue-700 underline">hpconnect@thedigitalhub.in</a></p>
     <p><strong>Phone:</strong> <a href="tel:09645346608" class="text-blue-700 underline">096453 46608</a></p>
-    <p><strong>Address:</strong><br>3rd Floor, Oberon Mall, No 41/416, NH Bypass, NH Bye Pass,<br>Padivattom, Edappally, Kochi, Ernakulam, Kerala 682024</p>
+    <p><strong>Address:</strong><br>
+      3rd Floor, Oberon Mall, No 41/416, NH Bypass, NH Bye Pass,<br>
+      Padivattom, Edappally, Kochi, Ernakulam, Kerala 682024
+    </p>
   </section>
 
-
+  <!-- Footer -->
   <footer class="bg-blue-900 text-white p-5">
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
       <div>
         <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
         <p>Email: <a href="mailto:hpconnect@thedigitalhub.in" class="underline">hpconnect@thedigitalhub.in</a></p>
         <p>Phone: <a href="tel:09645346608" class="underline">096453 46608</a></p>
-        <p>3rd Floor, Oberon Mall, No 41/416, NH Bypass, NH Bye Pass, Padivattom, Edappally, Kochi, Ernakulam, Kerala 682024</p>
+        <p>3rd Floor, Oberon Mall, No 41/416, NH Bypass, Padivattom, Kochi</p>
       </div>
       <iframe class="w-full h-64 border-0" src="https://maps.google.com/maps?q=Oberon%20Mall%20Kochi&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
     </div>
     <p class="text-center mt-4">&copy; 2025 The Digital Hub | HP Connect Showroom</p>
-
-  <footer class="bg-blue-900 text-white text-center p-5">
-    <p>&copy; 2025 The Digital Hub | HP Connect Showroom</p>
-
   </footer>
 
+  <!-- Scripts -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -145,4 +140,3 @@
   </script>
 </body>
 </html>
-
